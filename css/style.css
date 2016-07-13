@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Arial";
+}
+
+body{
+    overflow: hidden;
+}
+
+
+.leftBlock{
+    width: 350px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -350px;
+    background: rgba(0,39,14,.9);
+    z-index: 1;
+    transition: .15s;
+}
+
+.menu li {
+    border-top: 1px solid #000;
+}
+
+.menu li:last-child{
+    border-bottom: 1px solid #000;
+}
+
+
+.leftBlockMini:hover{
+    background: rgba(0,0,0,0);
+}
+
+.leftBlockMini:hover .logo_mini{
+    visibility: hidden;
+}
+
+.leftBlockMini:hover .leftBlock{
+    margin-left: 0;
+}
+
+.leftBlock p{
+    margin-top: 75px;
+    margin-left: 82px;
+}
+
+.menu{
+    margin-top: 70px;
+}
+
+.menu_mini{
+    margin-top: 49px;
+}
+
+
+
+.menu li a{
+    font-size: 18px;
+    line-height: 60px;
+    padding-left: 65px;
+    margin-right: 35px;
+    margin-left: 25px;
+    display: block;
+    color: #bbb;
+    text-decoration: none;
+    transition: .3s;
+}
+
+
+
+.menu li img{
+    vertical-align: middle;
+}
+
+
+.menu li:hover{
+    background: rgba(0,0,0,.75);
+}
+
+.leftBlockMini{
+    width: 90px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,39,14,.7);
+    z-index: 1;
+}
+
+.logo_mini{
+    margin: 55px 0 0 15px;
+}
+
+.menu li{
+    font-size: 18px;
+    line-height: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pictures{
+    position: relative;
+    z-index: 5;
+    width: 35px;
+    margin-top: 185px;
+}
+
+.pictures p{
+    margin-top: 28px;
+    margin-left: 27px;
+}
+
+.pictures p:hover .leftBlock{
+    margin-left: 0;
+}
+
+
+.mainContainer h2{
+    font-size: 60px;
+    color: #fff;
+}
+
+.mainContainer p{
+    font: 16px;
+    line-height: 22px;
+    font-weight: bolder;
+    color: #fff;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.75);
+    padding: 50px 35px;
+}
+
+.text{
+    width: 50%;
+    position: absolute;
+    bottom: 10%;
+    left: 370px;
+}
+
+
+.mountains,
+.lake{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+.mountains{
+    background: url(../img/house_in_mountains.jpg);
+    background-size: cover;
+    display: block;
+}
+
+
+
+
+.lake{
+    background: url(../img/house_near_lake.jpg);
+    background-size: cover;
+}
+
+.active{
+    display: block;
+}
