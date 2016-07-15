@@ -1,25 +1,84 @@
-$(document).ready(function() {
- $(".slider").each(function () { // обрабатываем каждый слайдер
-  var obj = $(this);
-  $(obj).append("<div class='nav'></div>");
-  $(obj).find("li").each(function () {
-   $(obj).find(".nav").append("<span rel='"+$(this).index()+"'></span>"); // добавляем блок навигации
-   $(this).addClass("slider"+$(this).index());
-  });
-  $(obj).find("span").first().addClass("on"); // делаем активным первый элемент меню
- });
-});
-function sliderJS (obj, sl) { // slider function
- var ul = $(sl).find("ul"); // находим блок
- var bl = $(sl).find("li.slider"+obj); // находим любой из элементов блока
- var step = $(bl).width(); // ширина объекта
- $(ul).animate({marginLeft: "-"+step*obj}, 500); // 500 это скорость перемотки
-}
-$(document).on("click", ".slider .nav span", function() { // slider click navigate
- var sl = $(this).closest(".slider"); // находим, в каком блоке был клик
- $(sl).find("span").removeClass("on"); // убираем активный элемент
- $(this).addClass("on"); // делаем активным текущий
- var obj = $(this).attr("rel"); // узнаем его номер
- sliderJS(obj, sl); // слайдим
- return false;
-});
+function mountains() {
+         document.getElementById('mountains').style.cssText = "opacity: 1; z-index: 1;";
+         document.getElementById('desert').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('lake').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('wood').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('water').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('contacts').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('menu_mountains').style.backgroundColor = 'rgba(0,0,0,.75)';
+         document.getElementById('menu_desert').style.backgroundColor = '';
+         document.getElementById('menu_lake').style.backgroundColor = '';
+         document.getElementById('menu_wood').style.backgroundColor = '';
+         document.getElementById('menu_water').style.backgroundColor = '';
+         document.getElementById('menu_contacts').style.backgroundColor = '';
+     };
+     function desert() {
+         document.getElementById('mountains').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('desert').style.cssText = "opacity: 1; z-index: 1;";
+         document.getElementById('lake').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('wood').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('water').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('contacts').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('menu_mountains').style.backgroundColor = '';
+         document.getElementById('menu_desert').style.backgroundColor = 'rgba(0,0,0,.75)';
+         document.getElementById('menu_lake').style.backgroundColor = '';
+         document.getElementById('menu_wood').style.backgroundColor = '';
+         document.getElementById('menu_water').style.backgroundColor = '';
+         document.getElementById('menu_contacts').style.backgroundColor = '';
+     };
+     function lake() {
+         document.getElementById('mountains').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('desert').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('lake').style.cssText = "opacity: 1; z-index: 1;";
+         document.getElementById('wood').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('water').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('contacts').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('menu_mountains').style.backgroundColor = '';
+         document.getElementById('menu_desert').style.backgroundColor = '';
+         document.getElementById('menu_lake').style.backgroundColor = 'rgba(0,0,0,.75)';
+         document.getElementById('menu_wood').style.backgroundColor = '';
+         document.getElementById('menu_water').style.backgroundColor = '';
+         document.getElementById('menu_contacts').style.backgroundColor = '';
+     };
+     function wood() {
+         document.getElementById('mountains').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('desert').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('lake').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('wood').style.cssText = "opacity: 1; z-index: 1;";
+         document.getElementById('water').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('contacts').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('menu_mountains').style.backgroundColor = '';
+         document.getElementById('menu_desert').style.backgroundColor = '';
+         document.getElementById('menu_lake').style.backgroundColor = '';
+         document.getElementById('menu_wood').style.backgroundColor = 'rgba(0,0,0,.75)';
+         document.getElementById('menu_water').style.backgroundColor = '';
+         document.getElementById('menu_contacts').style.backgroundColor = '';
+     };
+     function water() {
+         document.getElementById('mountains').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('desert').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('lake').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('wood').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('water').style.cssText = "opacity: 1; z-index: 1;";
+         document.getElementById('contacts').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('menu_mountains').style.backgroundColor = '';
+         document.getElementById('menu_desert').style.backgroundColor = '';
+         document.getElementById('menu_lake').style.backgroundColor = '';
+         document.getElementById('menu_wood').style.backgroundColor = '';
+         document.getElementById('menu_water').style.backgroundColor = 'rgba(0,0,0,.75)';
+         document.getElementById('menu_contacts').style.backgroundColor = '';
+     };
+     function contacts() {
+         document.getElementById('mountains').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('desert').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('lake').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('wood').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('water').style.cssText = "opacity: 0; z-index: 0;";
+         document.getElementById('contacts').style.cssText = "opacity: 1; z-index: 1;";
+         document.getElementById('menu_mountains').style.backgroundColor = '';
+         document.getElementById('menu_desert').style.backgroundColor = '';
+         document.getElementById('menu_lake').style.backgroundColor = '';
+         document.getElementById('menu_wood').style.backgroundColor = '';
+         document.getElementById('menu_water').style.backgroundColor = '';
+         document.getElementById('menu_contacts').style.backgroundColor = 'rgba(0,0,0,.75)';
+     };

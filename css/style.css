@@ -16,7 +16,7 @@ body{
     bottom: 0;
     margin-left: -350px;
     background: rgba(0,39,14,.9);
-    z-index: 1;
+    z-index: 2;
     transition: .15s;
 }
 
@@ -54,8 +54,6 @@ body{
     margin-top: 49px;
 }
 
-
-
 .menu li a{
     font-size: 18px;
     line-height: 60px;
@@ -65,10 +63,8 @@ body{
     display: block;
     color: #bbb;
     text-decoration: none;
-    transition: .3s;
+    transition: .25s;
 }
-
-
 
 .menu li img{
     vertical-align: middle;
@@ -85,7 +81,7 @@ body{
     top: 0;
     bottom: 0;
     background: rgba(0,39,14,.7);
-    z-index: 1;
+    z-index: 2;
 }
 
 .logo_mini{
@@ -98,25 +94,12 @@ body{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .pictures{
-    position: relative;
+    position: absolute;
     z-index: 5;
     width: 35px;
-    margin-top: 185px;
+    top: 156px;
+    display: block;
 }
 
 .pictures p{
@@ -128,6 +111,52 @@ body{
     margin-left: 0;
 }
 
+#mountains,
+#desert,
+#lake,
+#wood,
+#water{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: 1.0s;
+}
+
+#mountains{
+    background: url(../img/house_in_mountains.jpg);
+    background-size: cover;
+    opacity: 1;
+    z-index: 1;
+}
+
+#desert{
+    background: url(../img/house_in_desert.jpg);
+    background-size: cover;
+    
+}
+
+#lake{
+    background: url(../img/house_near_lake.jpg);
+    background-size: cover;
+}
+
+#wood{
+    background: url(../img/house_in_wood.jpg);
+    background-size: cover;
+}
+
+#water{
+    background: url(../img/house_on_water.jpg);
+    background-size: cover;
+}
+
+.active{
+    opacity: 1;
+    z-index: 1;
+}
 
 .mainContainer h2{
     font-size: 60px;
@@ -144,38 +173,49 @@ body{
     padding: 50px 35px;
 }
 
-.text{
+#mountains .text{
     width: 50%;
+    max-width: 800px;
+    position: absolute;
+    bottom: 10%;
+    left: 370px;
+}
+
+#desert .text{
+    width: 30%;
+    max-width: 800px;
+    position: absolute;
+    bottom: 20%;
+    left: 20%;
+}
+
+#lake .text{
+    width: 50%;
+    max-width: 800px;
+    position: absolute;
+    bottom: 10%;
+    left: 370px;
+}
+
+#wood .text{
+    width: 50%;
+    max-width: 800px;
+    position: absolute;
+    bottom: 10%;
+    left: 370px;
+}
+
+#water .text{
+    width: 50%;
+    max-width: 800px;
     position: absolute;
     bottom: 10%;
     left: 370px;
 }
 
 
-.mountains,
-.lake{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: none;
-}
-
-.mountains{
-    background: url(../img/house_in_mountains.jpg);
-    background-size: cover;
-    display: block;
+.navbar {
+  display: none;
 }
 
 
-
-
-.lake{
-    background: url(../img/house_near_lake.jpg);
-    background-size: cover;
-}
-
-.active{
-    display: block;
-}

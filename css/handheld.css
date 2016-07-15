@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Arial";
+}
+
+body{
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+
+.navbar{
+    display: block;
+}
+
+.main_logo{
+    margin: 15px 0 0 20px;
+}
+
+.navbar-inverse{
+    background: rgba(0,39,14,.9);
+}
+
+.navbar-inverse :focus{
+    background: rgb(0,39,14);
+}
+
+.leftBlock,
+.leftBlockMini,
+.pictures{
+    display: none;
+}
+
+
+.nav li{
+    margin-left: 50px;
+}
+
+
+
+.mountains_icon ::before{
+    background: url(../img/mountains.png);
+    content: "";
+    position: absolute;
+    left: -35px;
+    bottom: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.desert_icon ::before{
+    background: url(../img/desert.png);
+    content: "";
+    position: absolute;
+    left: -35px;
+    bottom: 5px;
+    width: 32px;
+    height: 30px;
+}
+
+.lake_icon ::before{
+    background: url(../img/lake.png);
+    content: "";
+    position: absolute;
+    left: -35px;
+    bottom: 5px;
+    width: 28px;
+    height: 30px;
+}
+
+.wood_icon ::before{
+    background: url(../img/wood.png);
+    content: "";
+    position: absolute;
+    left: -35px;
+    bottom: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.water_icon ::before{
+    background: url(../img/water.png);
+    content: "";
+    position: absolute;
+    left: -35px;
+    bottom: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.contacts_icon ::before{
+    background: url(../img/mountains.png);
+    content: "";
+    position: absolute;
+    left: -35px;
+    bottom: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+
+
+#mountains,
+#desert,
+#lake,
+#wood,
+#water{
+    transition: 1.0s;
+    margin-top: 60px;
+    background: none;
+}
+
+#mountains{
+    opacity: 1;
+    z-index: 1;
+}
+
+.mountains_img{
+    height: 35vh;
+    background: url(../img/house_in_mountains.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.desert_img{
+    background: url(../img/house_in_desert.jpg) no-repeat;
+    background-size: 100%;
+    height: 35vh;
+}
+
+.lake_img{
+    background: url(../img/house_near_lake.jpg) no-repeat;
+    background-size: 100%;
+    height: 35vh;
+}
+
+.wood_img{
+    background: url(../img/house_in_wood.jpg) no-repeat;
+    background-size: 100%;
+    height: 35vh;
+}
+
+.water_img{
+    background: url(../img/house_on_water.jpg) no-repeat;
+    background-size: 100%;
+    height: 35vh;
+}
+
+#mountains .text{
+    position: static;
+}
+
+
+.active{
+    opacity: 1;
+    z-index: 1;
+}
+
+.mainContainer h2{
+    font-size: 16px;
+    color: #ccc;
+}
+
+.mainContainer p{
+    font: 16px;
+    line-height: 22px;
+    font-weight: bolder;
+    color: #fff;
+    box-sizing: border-box;
+    background: rgba(0,0,0,.75);
+    padding: 50px 35px;
+}
+
+#mountains .text,
+#desert .text,
+#lake .text,
+#wood .text,
+#water .text{
+    width: 100%;
+    position: static;
+    text-align: center;
+}
+
+.mainContainer h2{
+    font-size: 20px;
+    color: #ccc;
+}
+
+
+.mainContainer p{
+    padding: 10px;
+}

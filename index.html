@@ -3,43 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <title>SNUGY</title>
-<!--    <link rel="stylesheet" href="css/bootstrap.css">-->
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon"> 
+    <link rel= "stylesheet" href="css/handheld.css" media="handheld,only screen and (max-device-width:760px)">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
     
-    <div class="pictures">
-        <p><img src="img/mountains.png" alt=""></p>
-        <p><img src="img/desert.png" alt=""></p>
-        <p><img src="img/lake.png" alt=""></p>
-        <p><img src="img/wood.png" alt=""></p>
-        <p><img src="img/water.png" alt=""></p>
+<div id="navbar-main">    
+<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+         <img class="main_logo" src="img/logo.png" alt="">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        
+        <div class="navbar-collapse collapse">
+        
+        <ul class="nav navbar-nav">
+            <li class="mountains_icon" onclick="mountains();"><a href="#">Дом в горах</a> </li>
+            <li class="desert_icon" onclick="desert();"><a href="#">Дом в пустыне</a></li>
+            <li class="lake_icon" onclick="lake();"><a href="#">Дом возле озера</a></li>
+            <li class="wood_icon" onclick="wood();"><a href="#">Дом в лесу</a></li>
+            <li class="water_icon" onclick="water();"><a href="#">Дом на воде</a></li>
+            <li class="contacts_icon" onclick="contacts();"><a href="#">Контакты</a></li>
+			
+        </ul>
+        </div><!--/.nav-collapse -->
+        </div>
+    </div>   
     </div>
     
 <div class="leftBlockMini">
        
         <p class="logo_mini"><img src="img/icon.png"></p>
         <ul class="menu menu_mini">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li id="menu_mountains" style="background: rgba(0,0,0,.75);"></li>
+            <li id="menu_desert"></li>
+            <li id="menu_lake"></li>
+            <li id="menu_wood"></li>
+            <li id="menu_water"></li>
+            <li id="menu_contacts"></li>
         </ul>
         
-    
+    <div class="pictures">
+        <p><img src="img/mountains.png" alt=""></p>
+        <p><img src="img/desert.png" alt=""></p>
+        <p><img src="img/lake.png" alt=""></p>
+        <p><img src="img/wood.png" alt=""></p>
+        <p><img src="img/water.png" alt=""></p>
+        <p class="contacts"><img src="img/water.png" alt=""></p>
+    </div>
         
         
     <div class="leftBlock">
        <p class="logo"><img src="img/logo.png"></p>
         <ul class="menu">
-            <li><a href="#">Дом в горах</a></li>
-            <li><a href="#">Дом в пустыне</a></li>
-            <li><a href="#">Дом возле озера</a></li>
-            <li><a href="#">Дом в лесу</a></li>
-            <li><a href="#">Дом на воде</a></li>
+            <li onclick="mountains();"><a href="#">Дом в горах</a></li>
+            <li onclick="desert();"><a href="#">Дом в пустыне</a></li>
+            <li onclick="lake();"><a href="#">Дом возле озера</a></li>
+            <li onclick="wood();"><a href="#">Дом в лесу</a></li>
+            <li onclick="water();"><a href="#">Дом на воде</a></li>
+            <li onclick="contacts();"><a href="#">Контакты</a></li>
         </ul>
     </div>
     
@@ -50,19 +82,55 @@
     
     
     <div class="mainContainer">
-       <div class="mountains">
+      
+       <div id="mountains">
+           <div class="mountains_img"></div>
             <div class="text">
                 <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
             </div>
        </div>
        
-       <div class="lake">
+       <div id="desert">
+            <div class="desert_img"></div>
              <div class="text">
-                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+                <h2>Пустыня Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
             </div>
        </div>
-    </div>
+   
+    
+    <div id="lake">
+            <div class="desert_img"></div>
+             <div class="text">
+                <h2>Озеро Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+            </div>
+       </div>
+    
+    
+     <div id="wood">
+            <div class="desert_img"></div>
+             <div class="text">
+                <h2>Лес Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+            </div>
+       </div>
+
+    <div id="water">
+            <div class="desert_img"></div>
+             <div class="text">
+                <h2>Вода Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+            </div>
+            
+        <div id="contacts">
+             <div class="text">
+                <h2>Контакты</h2>
+                <p>Телефон, адрес, мэил, вайбер и т.д.</p>
+            </div>
+       </div>
+     </div>
+    </div>   
 </body>
 </html>
