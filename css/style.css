@@ -4,57 +4,54 @@
     font-family: "Arial";
 }
 
-body{
-    overflow: hidden;
-}
 
+        /*MENU*/
 
 .leftBlock{
     width: 350px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin-left: -350px;
+    height: 10000px;
     background: rgba(0,39,14,.9);
-    z-index: 2;
-    transition: .15s;
+    margin-left: -260px;
+    position: fixed;
+    left: 0;
+    transition: .1s;
+    z-index: 10;
 }
 
-.menu li {
-    border-top: 1px solid #000;
-}
-
-.menu li:last-child{
-    border-bottom: 1px solid #000;
-}
-
-
-.leftBlockMini:hover{
-    background: rgba(0,0,0,0);
-}
-
-.leftBlockMini:hover .logo_mini{
-    visibility: hidden;
-}
-
-.leftBlockMini:hover .leftBlock{
+.leftBlock:hover{
     margin-left: 0;
 }
 
-.leftBlock p{
-    margin-top: 75px;
-    margin-left: 82px;
+.logo{
+    position: absolute;
+    top: 85px;
+    left: 60px;
 }
 
-.menu{
-    margin-top: 70px;
+.logo img{
+    width: 200px;
 }
 
-.menu_mini{
-    margin-top: 49px;
+
+.logo_mini{
+    position: absolute;
+    top: 55px;
+    left: 275px;
 }
 
-.menu li a{
+.leftBlock:hover .logo_mini{
+    display: none;
+}
+
+.leftBlock:hover .pictures{
+    display: none;
+}
+
+.leftBlockMenu{
+    margin-top: 175px;
+}
+
+.leftBlockMenu li a{
     font-size: 18px;
     line-height: 60px;
     padding-left: 65px;
@@ -66,156 +63,426 @@ body{
     transition: .25s;
 }
 
-.menu li img{
-    vertical-align: middle;
+.menu li {
+    border-top: 1px solid #000;
+    position: relative;
+    
 }
 
+.menu li:last-child{
+    border-bottom: 1px solid #000;
+}
 
 .menu li:hover{
     background: rgba(0,0,0,.75);
 }
 
-.leftBlockMini{
-    width: 90px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    background: rgba(0,39,14,.7);
-    z-index: 2;
-}
-
-.logo_mini{
-    margin: 55px 0 0 15px;
-}
-
-.menu li{
-    font-size: 18px;
-    line-height: 60px;
-}
-
-
 .pictures{
-    position: absolute;
-    z-index: 5;
+    position: fixed;
+    z-index: 15;
     width: 35px;
-    top: 156px;
+    top: 165px;
+    left: 0;
     display: block;
 }
 
 .pictures p{
-    margin-top: 28px;
+    margin-top: 27px;
     margin-left: 27px;
 }
 
-.pictures p:hover .leftBlock{
-    margin-left: 0;
+
+.menu_description :before{
+    content: " ";
+    background: url(../img/description.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 16px;
+    left: 27px; 
 }
 
-#mountains,
-#desert,
-#lake,
-#wood,
-#water{
+.menu_locations :before{
+    content: " ";
+    background: url(../img/mountains.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 16px;
+    left: 27px;
+}
+
+.menu_partners :before{
+    content: " ";
+    background: url(../img/partners.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    left: 27px;
+}
+
+.menu_contacts :before{
+    content: " ";
+    background: url(../img/contacts.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    left: 27px;
+}
+
+        /*INDEX*/
+
+.background_index{
+    background: url(../img/house_in_mountains.jpg) no-repeat;
+    background-size: cover;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    opacity: 0;
-    transition: 1.0s;
+    margin: auto;
 }
 
-#mountains{
-    background: url(../img/house_in_mountains.jpg);
-    background-size: cover;
-    opacity: 1;
-    z-index: 1;
-}
-
-#desert{
-    background: url(../img/house_in_desert.jpg);
-    background-size: cover;
-    
-}
-
-#lake{
-    background: url(../img/house_near_lake.jpg);
-    background-size: cover;
-}
-
-#wood{
-    background: url(../img/house_in_wood.jpg);
-    background-size: cover;
-}
-
-#water{
-    background: url(../img/house_on_water.jpg);
-    background-size: cover;
-}
-
-.active{
-    opacity: 1;
-    z-index: 1;
-}
-
-.mainContainer h2{
-    font-size: 60px;
+.background_index p{
+    width: 420px;
+    text-align: center;
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
     color: #fff;
-}
-
-.mainContainer p{
-    font: 16px;
-    line-height: 22px;
-    font-weight: bolder;
-    color: #fff;
-    box-sizing: border-box;
-    background: rgba(0,0,0,.75);
-    padding: 50px 35px;
-}
-
-#mountains .text{
-    width: 50%;
-    max-width: 800px;
-    position: absolute;
-    bottom: 10%;
-    left: 370px;
-}
-
-#desert .text{
-    width: 30%;
-    max-width: 800px;
-    position: absolute;
-    bottom: 20%;
-    left: 20%;
-}
-
-#lake .text{
-    width: 50%;
-    max-width: 800px;
-    position: absolute;
-    bottom: 10%;
-    left: 370px;
-}
-
-#wood .text{
-    width: 50%;
-    max-width: 800px;
-    position: absolute;
-    bottom: 10%;
-    left: 370px;
-}
-
-#water .text{
-    width: 50%;
-    max-width: 800px;
-    position: absolute;
-    bottom: 10%;
-    left: 370px;
+    font-family: "Archangelsk Regular";
+    font-size: 21px;
 }
 
 
-.navbar {
+    /*LOCATIONS*/
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
   display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
 }
 
 
+        /*DESCRIPTION*/
+
+.background_description,
+.background_partners{
+    background: url(../img/house_in_mountains.jpg) no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.background_partners{
+    background: url(../img/background_contacts.jpg) no-repeat;
+    background-size: cover;
+}
+
+.description{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 800px;
+    margin: 0 auto;
+    background: rgba(255,255,255,.7);
+    padding: 50px;
+}
+
+.description a{
+    color: blue;
+    font-weight: bold;
+}
+
+.description h2{
+    text-align: center;
+}
+
+.description h3{
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-family: "Archangelsk Regular";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.description p{
+    font-size: 17px;
+    line-height: 1.5;
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: "Colidri";
+}
+
+.description span{
+    font-family: "Archangelsk Regular";
+    letter-spacing: 1px;
+}
+
+
+ /*DESCRIPTION_SLIDER_360*/
+
+.threesixty {
+  position: relative;
+  overflow: hidden;
+  border: solid 1px #999;
+  margin: 25px auto;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.threesixty .spinner {
+  width: 60px;
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  background: #333;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.threesixty .spinner span {
+  font-family: Arial, "MS Trebuchet", sans-serif;
+  font-size: 12px;
+  font-weight: bolder;
+  color: #FFF;
+  text-align: center;
+  line-height: 30px;
+  display: block;
+}
+.threesixty .threesixty_images {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.threesixty .threesixty_images img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+.threesixty .threesixty_images img.current-image {
+  visibility: visible;
+  width: 100%;
+}
+.threesixty .threesixty_images img.previous-image {
+  visibility: hidden;
+  width: 0;
+}
+.threesixty .nav_bar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 11;
+}
+.threesixty .nav_bar a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  float: left;
+  background: url(../img/assets/sprites.png) no-repeat;
+  text-indent: -99999px;
+}
+.threesixty .nav_bar a.nav_bar_previous {
+  background-position: 0 -73px;
+}
+.threesixty .nav_bar a.nav_bar_next {
+  background-position: 0 -104px;
+}
+.threesixty .nav_bar a.nav_bar_play {
+  background-position: 0 0;
+}
+.threesixty .nav_bar a.nav_bar_stop {
+  background-position: 0 -37px;
+}
+
+        /*EQUIPMENT*/
+
+.equipment_table{
+    background: rgba(255,255,255,.7); 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 800px;
+    padding: 25px;
+    margin-top: 50px;
+    border-collapse: collapse;
+}
+
+.equipment_table td,
+.equipment_table th{
+    width: 200px;
+    padding: 5px;
+    vertical-align: top;
+    font-size: 14px;
+    border: 1px solid #000;
+}
+
+.back{
+    width: 75px;
+    position: absolute;
+    left: 150px;
+    top: 50px;
+    margin: auto;
+}
+
+.back img{
+    width: 75px;
+}
+
+
+        /*PARTNERS*/
+
+.container_partners{
+    width: 700px;
+    padding-left: 90px;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.our_partners{
+    position: absolute;
+    color: #fff;
+    left: 0;
+    right: 0;
+    top: 50px;
+    margin: auto;
+    text-align: center;
+    padding-left: 90px;
+}
+
+.partner{
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.partner img{
+    width: 150px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+        /*CONTACTS*/
+
+.contacts{
+    background: url(../img/background_contacts.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.contacts p{
+    text-align: center;
+    padding: 15px;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+}
+
+
+        /*FORM_FEEDBACK*/
+
+.form{
+    position: absolute;
+    top: 40px;
+    width: 300px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.form label{
+    padding-left: 10px;
+}
+
+
+.form input{
+    display: block;
+    margin: 10px;
+    width: 270px;
+    height: 30px;
+    font-size: 18px;
+    border: 0;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.form [type="submit"]{
+    margin-top: 20px;
+}
+
+
+
+        /*FONTS*/
+
+@font-face {
+    font-family: "Archangelsk Regular";
+    src: url(../fonts/Archangelsk.woff2) format('woff2'),
+         url(../fonts/Archangelsk.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
