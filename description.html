@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>SNUGY - Описание</title>
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon"> 
-    <link rel="stylesheet" href="css/style.css" media="screen" />
+    <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src='js/threesixty.js'></script>
@@ -23,8 +23,8 @@
             imagePath:'./img/assets/', // path of the image assets
             filePrefix: '', // file prefix if any
             ext: '.jpg', // extention for the assets
-            height: 480,
-            width: 640,
+            
+            width: 100,
             navigation: true
         });
 
@@ -35,31 +35,35 @@
 </head>
 <body>
         
-   <div class="leftBlock">
-       
-       <a href="index.html"><p class="logo"><img src="img/logo.png"></p></a>
+   <div class="leftBlock mobile_menu">
+
+        <a href="index.html">
+            <p class="logo"><img src="img/logo.png"></p>
+        </a>
 
         <p class="logo_mini"><img src="img/icon.png"></p>
 
         <div class="leftBlockMenu">
             <ul class="menu">
                 <li class="menu_description" style="background: rgba(0,0,0,.5);"><a href="description.html">Описание</a></li>
-                
+
                 <li class="menu_locations"><a href="locations.html">Локации</a></li>
-                
+
                 <li class="menu_partners"><a href="partners.html">Партнеры</a></li>
-                
+
                 <li class="menu_contacts"><a href="contacts.html">Контакты</a></li>
             </ul>
         </div>
-        
-    <div class="pictures">
-        <p><img src="img/description.png" alt=""></p>
-        <p><img src="img/mountains.png" alt=""></p>
-        <p><img src="img/partners.png" alt=""></p>
-        <p><img src="img/contacts.png" alt=""></p>
-    </div> 
-</div>
+
+       <p class="arrow_down"><img src="./img/down.png" alt="down"></p>
+       
+        <div class="pictures">
+            <p><img src="img/description.png" alt=""></p>
+            <p><img src="img/mountains.png" alt=""></p>
+            <p><img src="img/partners.png" alt=""></p>
+            <p><img src="img/contacts.png" alt=""></p>
+        </div>
+    </div>
     
     
     
@@ -145,7 +149,7 @@
        
     <h3>СКОЛЬКО <span>SNUGY</span> СТОИТ?</h3>
 
-        <p>На <span>SNUGY</span>-Life установлена цена EUR 89900.</p>
+        <p>На <span>SNUGY</span>-Life установлена цена всего EUR 77 777.</p>
 
     <h3> КАК ПРОИСХОДИТ ПРОЦЕСС ЗАКАЗА?</h3>
     <p>
@@ -168,13 +172,14 @@
         Разобранный и упакованный <span>SNUGY</span> может поместиться в 40-футовый контейнер. Контейнер будет отгружен к дистрибьютору в вашей стране, откуда вы можете забрать его и указав место размещения заселиться через 7 рабочих дней (наши сотрудники соберут его вам). В качестве альтернативы <span>SNUGY</span> может быть отправлен непосредственно к вам в собранном виде.
     </p>
     
-    <div class="threesixty car">
-        <div class="spinner">
-            <span>0%</span>
+    <div class="slider_360">
+        <div class="threesixty car">
+            <div class="spinner">
+                <span>0%</span>
+            </div>
+            <ol class="threesixty_images"></ol>
         </div>
-        <ol class="threesixty_images"></ol>
-    </div>
-    
+    </div>   
     </div> 
     
     

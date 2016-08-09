@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>SNUGY - Контакты</title>
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon"> 
-    <link rel="stylesheet" href="css/style.css" media="screen" />
+    <link rel="stylesheet" href="css/style.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="js/responsiveslides.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body style="overflow: hidden">
         
- <div class="leftBlock">
+ <div class="leftBlock mobile_menu">
        
-       <a href="index.html"><p class="logo"><img src="img/logo.png"></p></a>
+       <a href="index.html"><p class="logo"><img src="img/logo.png" alt="snugy"></p></a>
 
-        <p class="logo_mini"><img src="img/icon.png"></p>
+        <p class="logo_mini"><img src="img/icon.png" alt="snugy"></p>
 
         <div class="leftBlockMenu">
             <ul class="menu">
@@ -29,6 +29,8 @@
             </ul>
         </div>
         
+        <p class="arrow_down"><img src="./img/down.png" alt="down"></p>
+        
     <div class="pictures">
         <p><img src="img/description.png" alt=""></p>
         <p><img src="img/mountains.png" alt=""></p>
@@ -40,39 +42,24 @@
     
     <div class="contacts"> 
         <p>ООО «Атом-Проэкт» Украина, г. Киев Тел. 044 231 37 51 info@snugy.com.ua</p>
-        
+
+
+        <form class="form" action="http://snugy.com.ua/mail.php" method="post">
            
-<!--
-    <form name="MyForm" action="http://bloggood.ru/mail.php" method="post">
-    <p><input class="input" name="name" type="text" style="width:15%" /> Ваше имя*</p>
-
-    <p><input class="input" name="email" type="text" style="width:15%" /> Электронная почта*</p>
-
-    <p><input class="input" name="sub" type="text" style="width:15%" /> Тема сообщения</p>
-
-    <p>Текст сообщения:<br /><textarea name="body" cols="1" rows="5" style="width:30%" /></textarea></p>
-    <p><input id="submit" value="Отправить" type="submit" /></p>
-    </form>
--->
-
-        <div class="form" action="http://snugy.com.ua/mail.php" method="post">
-           
-            <label for="">Имя:</label>
-                <input class="input" name="name" type="text">
+            <label for="name">Имя:</label>
+                <input class="input" name="name" type="text" id="name">
                 
-            <label for="">Телефон:</label>
-                <input class="input" name="email" type="text">
+            <label for="phone">Телефон:</label>
+                <input class="input" name="sub" type="tel" id="phone">
                 
-            <label for="">E-mail:</label>
-                <input class="input" name="sub" type="text">
+            <label for="email">E-mail:</label>
+                <input class="input" name="email" type="email" id="email">
                 
                 <input id="submit" type="submit" value="Свяжитесь со мной!">
-        </div>
+        </form>
+
 
     </div>
-    
-    
-    
     
 </body>
 </html>

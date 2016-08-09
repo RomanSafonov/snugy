@@ -1,3 +1,4 @@
+
 /*!
  * 360 degree Image Slider v2.0.4
  * http://gaurav.jassal.me
@@ -117,8 +118,8 @@
      */
     base.initProgress = function() {
       base.$el.css({
-        width: AppConfig.width + 'px',
-        height: AppConfig.height + 'px',
+        width: AppConfig.width + '%',
+        height: AppConfig.height + '',
         'background-image': 'none !important'
       });
       if(AppConfig.styles) {
@@ -770,7 +771,7 @@
        * @cfg {Object} height [300]
        * Height of the slider
        */
-      height: 300,
+//      height: 300,
       /**
        * @cfg {Number} width [300]
        * Width of the slider

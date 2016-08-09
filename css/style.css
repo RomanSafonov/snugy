@@ -5,6 +5,8 @@
 }
 
 
+
+
         /*MENU*/
 
 .leftBlock{
@@ -132,11 +134,19 @@
     left: 27px;
 }
 
-        /*INDEX*/
+.arrow_down{
+    display: none;
+}
+
+
+
+
+            /*INDEX*/
 
 .background_index{
     background: url(../img/house_in_mountains.jpg) no-repeat;
     background-size: cover;
+    background-position: center;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -146,10 +156,10 @@
 }
 
 .background_index p{
-    width: 420px;
+    max-width: 600px;;
     text-align: center;
     position: absolute;
-    bottom: 100px;
+    bottom: 20%;
     left: 0;
     right: 0;
     margin: auto;
@@ -158,39 +168,158 @@
     font-size: 21px;
 }
 
-
-    /*LOCATIONS*/
-
-.rslides {
-  position: relative;
-  list-style: none;
-  overflow: hidden;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  }
-
-.rslides li {
-  -webkit-backface-visibility: hidden;
-  position: absolute;
-  display: none;
-  width: 100%;
-  left: 0;
-  top: 0;
+.background_index p img{
+    width: 80%;
 }
 
-.rslides li:first-child {
-    position: relative;
-    display: block;
-    float: left;
+
+        /*LOCATIONS*/
+
+html,
+body {
+    height: 100%;
 }
 
-.rslides img {
-    display: block;
-    height: auto;
-    float: left;
+* {
+    outline: none;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #000;
+}
+
+#toolbar {
+    position: fixed;
+    z-index: 3;
+    right: 10px;
+    top: 10px;
+    padding: 5px;
+    background: url(../img/fs_img_g_bg.png);
+}
+        
+#toolbar img {
+    border: none;
+}
+
+#img_title {
+    position: fixed;
+    z-index: 3;
+    left: 10px;
+    top: 10px;
+    padding: 10px;
+    background: url(../img/fs_img_g_bg.png);
+    color: #FFF;
+    font-family: 'Josefin Sans Std Light', arial, serif;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+#bg {
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
     width: 100%;
-    border: 0;
+    height: 100%;
+}
+
+#bgimg {
+    display: none;
+    -ms-interpolation-mode: bicubic;
+}
+
+#preloader {
+    position: relative;
+    z-index: 3;
+    width: 32px;
+    padding: 20px;
+    top: 80px;
+    margin: auto;
+    background: #000;
+}
+
+#thumbnails_wrapper {
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: url(empty.gif);
+    /* stupid ie needs a background value to understand hover area */
+}
+
+#outer_container {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#outer_container .thumbScroller {
+    position: relative;
+    overflow: hidden;
+    background: url(fs_img_g_bg.png);
+}
+
+#outer_container .thumbScroller,
+#outer_container .thumbScroller .container,
+#outer_container .thumbScroller .content {
+    height: 170px;
+}
+
+#outer_container .thumbScroller .container {
+    position: relative;
+    left: 0;
+}
+
+#outer_container .thumbScroller .content {
+    float: left;
+}
+
+#outer_container .thumbScroller .content div {
+    height: 100%;
+}
+
+#outer_container .thumbScroller img {
+    border: 5px solid #fff;
+}
+
+#outer_container .thumbScroller .content div a {
+    display: block;
+    padding: 5px;
+}
+
+.nextImageBtn,
+.prevImageBtn {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    margin: -25px 10px 0 10px;
+    z-index: 3;
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.4;
+    -khtml-opacity: 0.4;
+    opacity: 0.4;
+}
+
+.nextImageBtn:hover,
+.prevImageBtn:hover {
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}
+
+.nextImageBtn {
+    right: 0;
+    background: #000 url(../img/nextImgBtn.png) center center no-repeat;
+}
+
+.prevImageBtn {
+    background: #000 url(../img/prevImgBtn.png) center center no-repeat;
+    left: 90px;
 }
 
 
@@ -200,6 +329,7 @@
 .background_partners{
     background: url(../img/house_in_mountains.jpg) no-repeat;
     background-size: cover;
+    background-position: center;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -210,13 +340,14 @@
 .background_partners{
     background: url(../img/background_contacts.jpg) no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .description{
     position: absolute;
     left: 0;
     right: 0;
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
     background: rgba(255,255,255,.7);
     padding: 50px;
@@ -254,7 +385,13 @@
 }
 
 
- /*DESCRIPTION_SLIDER_360*/
+         /*DESCRIPTION_SLIDER_360*/
+
+
+.slider_360{
+    max-width: 640px;
+    margin: 0 auto;
+}
 
 .threesixty {
   position: relative;
@@ -265,6 +402,7 @@
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
+
 .threesixty .spinner {
   width: 60px;
   display: block;
@@ -276,6 +414,7 @@
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
+
 .threesixty .spinner span {
   font-family: Arial, "MS Trebuchet", sans-serif;
   font-size: 12px;
@@ -285,32 +424,42 @@
   line-height: 30px;
   display: block;
 }
+
 .threesixty .threesixty_images {
   display: none;
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .threesixty .threesixty_images img {
-  position: absolute;
+  -position: absolute;
   top: 0;
   width: 100%;
   height: auto;
 }
+
+.threesixty_images li{
+    font-size: 0;
+}
+
 .threesixty .threesixty_images img.current-image {
   visibility: visible;
   width: 100%;
 }
+
 .threesixty .threesixty_images img.previous-image {
   visibility: hidden;
   width: 0;
 }
+
 .threesixty .nav_bar {
   position: absolute;
   top: 10px;
   right: 10px;
   z-index: 11;
 }
+
 .threesixty .nav_bar a {
   display: block;
   width: 32px;
@@ -319,18 +468,23 @@
   background: url(../img/assets/sprites.png) no-repeat;
   text-indent: -99999px;
 }
+
 .threesixty .nav_bar a.nav_bar_previous {
   background-position: 0 -73px;
 }
+
 .threesixty .nav_bar a.nav_bar_next {
   background-position: 0 -104px;
 }
+
 .threesixty .nav_bar a.nav_bar_play {
   background-position: 0 0;
 }
+
 .threesixty .nav_bar a.nav_bar_stop {
   background-position: 0 -37px;
 }
+
 
         /*EQUIPMENT*/
 
@@ -373,7 +527,7 @@
         /*PARTNERS*/
 
 .container_partners{
-    width: 700px;
+    max-width: 700px;
     padding-left: 90px;
     margin: auto;
     padding-top: 100px;
@@ -393,7 +547,7 @@
 .partner{
     width: 200px;
     height: 200px;
-    background: #fff;
+    background: rgba(255,255,255,.8);
     display: inline-block;
     vertical-align: top;
     margin: 10px;
@@ -417,7 +571,8 @@
 .contacts{
     background: url(../img/background_contacts.jpg) no-repeat;
     background-size: cover;
-    position: absolute;
+    background-position: center;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -434,7 +589,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    position: absolute;
+    position: fixed;
 }
 
 
@@ -458,7 +613,6 @@
     padding-left: 10px;
 }
 
-
 .form input{
     display: block;
     margin: 10px;
@@ -467,16 +621,14 @@
     font-size: 18px;
     border: 0;
     border-radius: 5px;
-    padding-left: 10px;
 }
 
 .form [type="submit"]{
     margin-top: 20px;
 }
 
-
-
-        /*FONTS*/
+    
+                /*FONTS*/
 
 @font-face {
     font-family: "Archangelsk Regular";
@@ -485,4 +637,165 @@
     font-weight: normal;
     font-style: normal;
 
+}
+
+
+                /*ADAPTIVE*/
+
+
+@media (max-width: 991px){
+        
+    .leftBlock{
+        display: none;
+    } 
+
+                /*mobile_menu*/
+
+    .mobile_menu{
+        display: block;
+        width: 100%;
+        height: 50px;
+        margin: 0;
+        border-bottom: 1px solid #000;
+    }
+    
+    .logo{
+        top: 15px;
+        left: 15px;
+    }
+
+    .logo_mini{
+        display: none;
+    }
+    
+    .menu{
+        background: rgba(0,39,14,.9);
+    }
+    
+    .leftBlockMenu{
+        margin-top: -300px;
+        transition: .1s;
+    }
+    
+    .pictures{
+        display: none;
+    }
+    
+    .navbar-toggle{
+        position: absolute;
+        top: 8px;
+        right: 15px;
+        padding: 10px;
+    }
+    
+    .icon-bar{
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+        background: #ccc;
+    }
+    
+    .mobile_menu:hover .leftBlockMenu{
+        margin-top: 50px;
+    }
+    
+    .arrow_down{
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 7px;
+        z-index: 100;
+    }
+    
+    
+            /*description_mobile*/
+    
+    .description{
+        padding: 60px 20px;      
+    }
+    
+    
+            /*equipment_mobile*/
+    
+    .equipment_table{
+        display: none;
+    }
+    
+    .back{
+        display: none;
+    }
+    
+    .wrapper_equipment_mobile{
+        padding: 60px 0 20px;
+    }
+    
+    .equipment_mobile{
+        position: relative;
+        padding: 10px 20px;
+        background: rgba(255,255,255,.7);
+        list-style: none;
+        line-height: 1.5;
+        
+    }
+    
+    .equipment_mobile li{
+        font-family: "Colidri";
+        font-size: 17px;
+        font-weight: bold;
+    }
+    
+    .equipment_mobile :first-child{
+        font-size: 18px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    
+            /*locations_mobile*/
+    
+    .prevImageBtn{
+        left: 0;
+    }
+    
+    #toolbar{
+        top: 55px;
+        right: 5px;
+    }
+    
+    #thumbnails_wrapper{
+        display: none;
+    }
+    
+            /*partners_mobile*/
+    
+    
+    .our_partners{
+        padding-left: 0;
+    }
+    
+    .container_partners{
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    
+            /*contacts_mobile*/
+    
+    .form{
+        width: 85%;
+        max-width: 300px;
+        position: static;
+        margin-top: 20px;
+    }
+    
+    .form input{
+        padding-left: 0;
+        width: 85%;
+    }
+    
+    .contacts p{
+        position: static;
+        margin-top: 65px;
+    }
 }
